@@ -75,6 +75,7 @@ RUN if [ "$WITH_TESTS" = "yes" ]; then \
             karma \
             karma-chrome-launcher \
             karma-coverage \
+	    karma-coveralls \
             karma-junit-reporter \
             karma-qunit \
             qunit; \

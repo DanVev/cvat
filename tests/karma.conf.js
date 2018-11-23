@@ -34,12 +34,13 @@ module.exports = function(config) {
         '**/!(qunitTests).js': ['coverage']
     },
 
-    reporters: ['progress', 'junit', 'coverage'],
+    reporters: ['progress', 'junit', 'coverage', 'coveralls'],
 
     coverageReporter: {
       dir: path.join(process.env.HOME, 'media/coverage'),
       reporters: [
         { type: 'html', subdir: '.' },
+        {type: 'lcov', subdir: '.'}
       ],
       instrumenterOptions: {
        istanbul: { noCompact: true }
